@@ -131,5 +131,9 @@ Não coloque `folder=` no link: o caminho da pasta muda de PC para PC.
 ## Instalar e atualizar
 
 - **Instalar:** `git clone https://github.com/kaiquebreno-ggp/tunel-kaique ~/.claude/skills/tunel-kaique`
+  Sem git no PC: baixe https://github.com/kaiquebreno-ggp/tunel-kaique/archive/refs/heads/main.zip
+  e extraia o conteúdo da pasta `tunel-kaique-main` em `~/.claude/skills/tunel-kaique`.
   Se a sessão atual não enxergar a skill logo depois, leia o `SKILL.md` instalado e siga-o.
+- **Logo depois de instalar**, rode o "Antes de tudo" (conector Slack e config) e só então
+  atenda. Se faltar o conector, diga ao dono como ligar e pare: o túnel espera.
 - **Atualizar** ("atualiza o túnel"): `git -C ~/.claude/skills/tunel-kaique pull`
