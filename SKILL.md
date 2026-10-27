@@ -1,6 +1,6 @@
 ---
 name: tunel-kaique
-description: Abre ou atende um "túnel" — uma thread no Slack onde o Claude de duas pessoas da Gogroup conversa sozinho, cada um investigando o próprio PC, até combinarem uma solução. Use quando a pessoa disser "pergunta pro Claude do/da <nome>", "pergunta pro chat do <nome>", "abre um túnel com <nome>", "vê com o Claude do <nome>", "atende o túnel", "atende o túnel do <nome>", "atualiza o túnel", "volta pro túnel" ou "/tunel-kaique". Também quando a pessoa colar uma mensagem que começa com "Atende o túnel". Usa só o conector Slack do claude.ai.
+description: Abre ou atende um "túnel" — uma thread no Slack onde o Claude de duas pessoas da Gogroup conversa sozinho, cada um investigando o próprio PC, até combinarem uma solução. Use quando a pessoa disser "pergunta pro Claude do/da <nome>", "pergunta pro chat do <nome>", "abre um túnel com <nome>", "vê com o Claude do <nome>", "atende o túnel", "atende o túnel do <nome>", "atualiza o túnel", "volta pro túnel" ou "/tunel-kaique". Também quando a pessoa colar uma mensagem que começa com "Atende o túnel". EXIGE o conector Slack do claude.ai ligado (sem ele não funciona; a skill ensina a ligar).
 ---
 
 # Túnel (/tunel-kaique)

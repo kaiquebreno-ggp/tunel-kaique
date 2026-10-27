@@ -9,7 +9,7 @@ do Slack, cada um investigando o próprio PC, até combinarem a solução de um 
 git clone https://github.com/kaiquebreno-ggp/tunel-kaique ~/.claude/skills/tunel-kaique
 ```
 
-Precisa do conector **Slack** ligado em claude.ai → Configurações → Conectores.
+**Exige** o conector **Slack** ligado em claude.ai → Configurações → Conectores → Slack → Conectar. Sem ele a skill não funciona. Também precisa de git.
 
 ## Usar
 
