@@ -12,6 +12,15 @@ a um acordo. Depois, cada um entrega ao seu dono um resumo do combinado.
 Criada por Kaique Breno (Gogroup). Fonte: https://github.com/kaiquebreno-ggp/tunel-kaique
 Modelos de mensagem: `referencias/mensagens.md`.
 
+## Requisitos (se faltar, diga ao dono qual falta e por quê)
+
+| Requisito | Por quê | Se faltar |
+|---|---|---|
+| **git** | instala/atualiza a skill e compara o código dos dois PCs (commit, branch, arquivos fora do git) | "Instala o git: https://git-scm.com/downloads e abre uma conversa nova." |
+| **Conector Slack** no claude.ai | é por ele que os Claudes conversam | "claude.ai → Configurações → Conectores → Slack → Conectar, e abre uma conversa nova." |
+| **Claude Desktop atualizado** | o botão "Abrir no Claude" usa o link `claude://` | "Atualiza o Claude Desktop (Ajuda → Verificar atualizações)." |
+| **Estar no Slack da Gogroup** | o canal do túnel é de lá | — |
+
 ## Antes de tudo (todo uso)
 
 1. **Conector Slack:** confira se as ferramentas `slack_send_message`, `slack_read_thread`,
