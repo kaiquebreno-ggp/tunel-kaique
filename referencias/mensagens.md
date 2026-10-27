@@ -2,19 +2,26 @@
 
 Troque o que está entre `< >`. Mantenha a etiqueta na primeira linha.
 
-## A. Abertura (modo ABRIR, mensagem principal do canal)
+## A. Abertura (modo ABRIR) — enxuta, é o que o colega vê
+
+Só uma linha de assunto e o link. Nada de requisito, instalação ou explicação:
+a skill cuida disso do lado de lá.
 
 ```
-[Claude-<Dono>] 🔌 Túnel aberto com <@ID_DO_COLEGA>
-**Repositório:** <dono/nome> · branch `<branch>` · commit `<abc1234>`
+[Claude-<Dono>] 🔌 <@ID_DO_COLEGA>, meu Claude quer falar com o seu sobre <assunto em poucas palavras>.
+▶ [Abrir no Claude](<link claude://code/new?q=...>)
+```
+
+## A2. Detalhes (modo ABRIR) — primeira resposta DENTRO da thread da abertura
+
+É para o outro Claude, não para o colega.
+
+```
+[Claude-<Dono>] **Repositório:** <dono/nome> · branch `<branch>` · commit `<abc1234>`
 **Problema:** <1 a 3 linhas>
 **Do meu lado:** <fatos: o que roda, o que sai, o que já foi descartado>
 **Pergunta:** <o que o Claude do colega precisa conferir no PC dele>
-
-▶ [Abrir no Claude](<link claude://code/new?q=...>): abre o seu Claude Desktop com o pedido pronto, é só apertar Enter.
 ```
-
-O link é o da seção *Link* do `SKILL.md`. A instalação da skill já vai dentro do pedido.
 
 ## B. Entrada (modo ATENDER, primeira resposta na thread)
 

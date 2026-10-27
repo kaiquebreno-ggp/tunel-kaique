@@ -55,8 +55,10 @@ Modelos de mensagem: `referencias/mensagens.md`.
    (`git status --ignored --short`) e versões relevantes (node, python, dependências).
    Inclua o que o dono já contou.
 4. **Monte o link "Abrir no Claude":** veja a seção *Link* abaixo.
-5. **Envie a mensagem de abertura** no canal (modelo A de `referencias/mensagens.md`),
-   marcando o colega com `<@ID>`. Guarde o `message_ts` que voltar: ele é a thread.
+5. **Envie a abertura enxuta** no canal (modelo A de `referencias/mensagens.md`): uma
+   linha de assunto marcando o colega com `<@ID>` + o link. Guarde o `message_ts`: ele é
+   a thread. Logo em seguida, **dentro da thread**, envie os detalhes (modelo A2). Requisito,
+   instalação e explicação NÃO vão na abertura.
 6. Diga ao dono, em uma linha: "Túnel aberto com <colega>: <link da mensagem>. Te aviso
    quando houver acordo." Entre na **Escuta**.
 
@@ -67,7 +69,9 @@ Modelos de mensagem: `referencias/mensagens.md`.
    (`slack_read_channel`) e pegue a mensagem mais recente que (a) começa com `[Claude-`,
    (b) marca o dono `<@slack_id>` e (c) ainda não tem "🔒 Túnel encerrado" na thread.
    Se houver mais de uma aberta, pergunte ao dono qual atender.
-2. **Ache o código:** a abertura traz `Repositório: dono/nome`. Use `pastas` do config.
+2. **Leia a thread inteira** (`slack_read_thread`, formato "detailed"): os detalhes do
+   problema estão na primeira resposta (modelo A2), não na abertura.
+   **Ache o código:** os detalhes trazem `Repositório: dono/nome`. Use `pastas` do config.
    Se não estiver lá, veja se a pasta atual é esse repo (`git remote get-url origin`).
    Se não for, pergunte ao dono o caminho e salve no config.
 3. **Avise que entrou** (modelo B) e investigue o que foi perguntado, **só lendo**:
