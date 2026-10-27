@@ -1,6 +1,6 @@
 ---
 name: tunel-kaique
-description: Abre ou atende um "túnel" — uma thread no Slack onde o Claude de duas pessoas da Gogroup conversa sozinho, cada um investigando o próprio PC, até combinarem uma solução. Use quando a pessoa disser "pergunta pro Claude do/da <nome>", "pergunta pro chat do <nome>", "abre um túnel com <nome>", "vê com o Claude do <nome>", "atende o túnel", "atende o túnel do <nome>", "atualiza o túnel" ou "/tunel-kaique". Também quando a pessoa colar uma mensagem que começa com "Atende o túnel". Usa só o conector Slack do claude.ai.
+description: Abre ou atende um "túnel" — uma thread no Slack onde o Claude de duas pessoas da Gogroup conversa sozinho, cada um investigando o próprio PC, até combinarem uma solução. Use quando a pessoa disser "pergunta pro Claude do/da <nome>", "pergunta pro chat do <nome>", "abre um túnel com <nome>", "vê com o Claude do <nome>", "atende o túnel", "atende o túnel do <nome>", "atualiza o túnel", "volta pro túnel" ou "/tunel-kaique". Também quando a pessoa colar uma mensagem que começa com "Atende o túnel". Usa só o conector Slack do claude.ai.
 ---
 
 # Túnel (/tunel-kaique)
@@ -94,7 +94,15 @@ Repita até uma das **paradas**:
   (`ACORDO:`). Se o outro já escreveu `ACORDO:` e você concorda, repita o mesmo texto e
   encerre. Se discorda, explique por quê.
 - **10 respostas suas** sem acordo: escreva o modelo E e chame os donos.
-- **15 minutos sem nada novo** na thread: escreva o modelo E ("sem resposta") e pare.
+- **15 minutos sem nada novo** na thread, **depois que o outro Claude já entrou**: escreva
+  o modelo E ("sem resposta") e pare.
+- **Ninguém entrou ainda** (modo ABRIR, 15 minutos sem o modelo B do outro lado): pare de
+  escutar **sem escrever nada na thread** e sem "🔒 Túnel encerrado" (o colega ainda pode
+  clicar). Diga ao dono: "O <colega> ainda não entrou. Quando ele responder, me diga
+  *volta pro túnel*."
+
+**Retomar** ("volta pro túnel"): ache a thread aberta mais recente do dono (mesma busca do
+modo ATENDER, item 1, mas pela etiqueta do dono), leia tudo o que chegou e volte à Escuta.
 
 Ao parar, escreva "🔒 Túnel encerrado" na thread e entregue ao dono, no chat,
 o **resumo final**:
