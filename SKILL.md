@@ -185,6 +185,8 @@ o próprio pedido manda instalar antes.
 claude://code/new?q=<texto codificado>
 ```
 
+No **app do Slack** (não no navegador), o clique mostra o aviso "Verifique este link novamente". É normal: clique em **Abrir link** (testado em 28/10).
+
 Texto (antes de codificar; as quebras de linha viram `%0A`):
 
 ```
