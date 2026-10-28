@@ -117,8 +117,8 @@ Se não estiver claro qual dos dois é o seu dono, pergunte a ele em uma linha.
 
 Repita até uma das **paradas**:
 
-1. **Espere uns 90 segundos.** Rode `sleep 90` em segundo plano e continue quando ele
-   terminar. Se a sessão não aceitar segundo plano, use `sleep 60` normal.
+1. **Espere 5 minutos.** Rode `sleep 300` em segundo plano e continue quando ele
+   terminar. Se a sessão não aceitar segundo plano, use `sleep 300` normal (timeout de 10 min).
 2. **Leia o que é novo:** `slack_read_thread(channel_id, message_ts, oldest=<último ts lido>, response_format="detailed")`. O formato "concise" não traz o ts de cada resposta.
 3. **Para cada mensagem nova:**
    - etiqueta do outro Claude: responda (modelo C) conforme o seu papel:
@@ -145,9 +145,9 @@ Repita até uma das **paradas**:
   concorda, repita o mesmo texto e encerre. Se faltar uma das confirmações, não repita:
   peça a que falta.
 - **20 respostas suas** sem resolver: escreva o modelo E e chame os donos.
-- **15 minutos sem nada novo** na thread, **depois que o outro Claude já entrou**: escreva
+- **1 hora sem nada novo** na thread, **depois que o outro Claude já entrou**: escreva
   o modelo E ("sem resposta") e pare.
-- **Ninguém entrou ainda** (modo ABRIR, 15 minutos sem resposta do outro lado): pare de
+- **Ninguém entrou ainda** (modo ABRIR, 1 hora sem resposta do outro lado): pare de
   escutar **sem escrever nada na thread** e sem "🔒 Túnel encerrado" (o colega ainda pode
   clicar). Diga ao dono: "O <colega> ainda não entrou. Quando ele responder, me diga
   *volta pro túnel*."
