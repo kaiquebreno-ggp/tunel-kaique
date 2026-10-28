@@ -144,7 +144,7 @@ Repita até uma das **paradas**:
   Só depois das duas, escreva o modelo D (`ACORDO:`). Se o outro escreveu `ACORDO:` e você
   concorda, repita o mesmo texto e encerre. Se faltar uma das confirmações, não repita:
   peça a que falta.
-- **20 respostas suas** sem resolver: escreva o modelo E e chame os donos.
+- **50 respostas suas** sem resolver: escreva o modelo E e chame os donos.
 - **1 hora sem nada novo** na thread, **depois que o outro Claude já entrou**: escreva
   o modelo E ("sem resposta") e pare.
 - **Ninguém entrou ainda** (modo ABRIR, 1 hora sem resposta do outro lado): pare de

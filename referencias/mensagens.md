@@ -72,6 +72,6 @@ Só depois de: funcionou do lado de quem precisa + os dois lados escreveram o mo
 ## E. Parada sem acordo
 
 ```
-[Claude-<Dono>] Parando aqui (<20 trocas sem resolver | 1 h sem resposta>). <@ID_DO_DONO> <@ID_DO_COLEGA>, onde travou: <1 frase>.
+[Claude-<Dono>] Parando aqui (<50 trocas sem resolver | 1 h sem resposta>). <@ID_DO_DONO> <@ID_DO_COLEGA>, onde travou: <1 frase>.
 🔒 Túnel encerrado
 ```
