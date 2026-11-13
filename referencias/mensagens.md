@@ -1,77 +1,49 @@
 # Modelos de mensagem do túnel
 
-Troque o que está entre `< >`. Mantenha a etiqueta na primeira linha.
+Troque o que está entre `< >`. Os blocos A e B vão na DM do dono com o colega, fora de thread.
+Tudo que vier depois vai na thread dessa mensagem.
 
-## A. Abertura (modo ABRIR) — enxuta, é o que o colega vê
+## A. Primeira mensagem COM CONTEXTO (o dono explicou, ou está no histórico da DM)
 
-Só uma linha de assunto e o link. Nada de requisito, instalação ou explicação:
-a skill cuida disso do lado de lá.
-
-```
-[Claude-<Dono>] 🔌 <@ID_DO_COLEGA>, meu Claude quer falar com o seu sobre <assunto em poucas palavras>.
-▶ [Abrir no Claude](<link claude://code/new?q=...>)
-```
-
-## A2-precisa. Problema detalhado — de quem tem o problema
-
-Primeira mensagem de quem precisa: dentro da thread logo após a abertura (se abriu) ou
-como primeira resposta (se atendeu um A2-sabe). É para o outro Claude, não para o colega.
+````
+Ei <Colega>, manda isso pro teu Claude 👇 (copia o bloco inteiro e cola no chat dele)
 
 ```
-[Claude-<Dono>] **Papel:** precisa de ajuda
-**Repositório:** <dono/nome> · branch `<branch>` · commit `<abc1234>` (ou "nenhum")
-**O que acontece:** <erro, tela ou comportamento, com a mensagem exata se houver>
-**Já tentei e não deu:** <cada tentativa e o resultado>
-**Pedido:** o que funcionou aí para <assunto>? Onde você vê mais chance de resolver?
+Oi, Claude do <Colega>! Aqui é o Claude do <Dono>. Vamos conversar pelo MCP do Slack, na THREAD da mensagem do <Dono> que começa com "Ei <Colega>, manda isso pro teu Claude" (DM <Dono> <-> <Colega>, canal <ID da DM>). Responde sempre nessa thread, começando com [Claude-<Colega>]. Eu leio a cada 1 minuto.
+
+O problema: <o que acontece, em 1 a 2 frases>.
+<O que resolve, se você sabe: passos, endereço, NOMES de variável, armadilhas, em lista curta.>
+
+Pra começar, responde na thread:
+1. <pergunta>
+2. <pergunta>
+Depois <teste curto que prova que funciona> e me conta o resultado.
+
+No fim, salva isso no teu CLAUDE.md global/memória pra próxima vez que o <Colega> pedir <assunto>.
+<Regra fixa do dono, se houver.>
 ```
+````
 
-## A2-sabe. Oferta de ajuda — de quem já resolveu
+## B. Primeira mensagem SEM CONTEXTO (não se sabe ainda qual é o problema)
 
-Primeira mensagem dentro da thread quando quem abriu é quem sabe.
-
-```
-[Claude-<Dono>] **Papel:** já resolvi isso aqui e quero ajudar
-**O que funcionou aqui:** <passos validados, configuração, regra de negócio; com prova>
-**Para eu ajudar:** responde primeiro com o problema detalhado: o que acontece (erro ou tela), o que já foi tentado e não deu certo.
-```
-
-## B. Entrada de quem sabe (modo ATENDER, depois de um A2-precisa)
-
-```
-[Claude-<Dono>] Entrei. **Papel:** já resolvi algo parecido.
-**O que funcionou aqui:** <passos validados, com o comando ou o arquivo que prova>
-**Primeiro passo para você:** <uma ação, a de maior chance>
-```
-
-## C. Resposta comum (os dois lados)
-
-Quem sabe: o que já funcionou ou foi validado, com prova. Quem precisa: o resultado do
-que testou e a próxima pergunta ("o que funcionou aí?", "o que você teve que resolver nisso?").
+````
+Ei <Colega>, manda isso pro teu Claude 👇 (copia o bloco inteiro e cola no chat dele)
 
 ```
-[Claude-<Dono>] <o que encontrei ou testei, com o comando ou o arquivo que prova>
-<pergunta de volta, se houver; uma por vez>
+Oi, Claude do <Colega>! Aqui é o Claude do <Dono>, ele me pediu pra ajudar vocês. Vamos conversar pelo MCP do Slack, na THREAD da mensagem do <Dono> que começa com "Ei <Colega>, manda isso pro teu Claude" (DM <Dono> <-> <Colega>, canal <ID da DM>). Responde sempre nessa thread, começando com [Claude-<Colega>]. Eu leio a cada 1 minuto.
+
+Primeiro, pergunta ao <Colega> o que está travando e olha o PC dele (só leitura). Depois me responde na thread:
+1. o que vocês querem fazer
+2. o que acontece (erro ou tela, com a mensagem exata)
+3. o que já tentaram e o resultado
+4. onde está o projeto e os NOMES das variáveis envolvidas (nunca valor de chave)
+
+Quando resolvermos, salva o aprendizado no teu CLAUDE.md global/memória.
 ```
+````
 
-## F. Nada mais a acrescentar (antes do acordo)
-
-Só depois de quem precisa confirmar que funcionou (teste no PC ou "sim" do dono).
-
-```
-[Claude-<Dono>] Confirmado do meu lado: <teste e resultado | dono confirmou>. Última passada: <o que ainda vale passar | nada mais a acrescentar>.
-```
-
-## D. Acordo
-
-Só depois de: funcionou do lado de quem precisa + os dois lados escreveram o modelo F.
+## C. Fechamento (na thread, só depois do teste que funcionou + confirmação de que salvou)
 
 ```
-[Claude-<Dono>] ACORDO: <causa em 1 frase>. Solução: <o que cada lado fez>. Confirmado por: <teste ou dono>.
-```
-
-## E. Parada sem acordo
-
-```
-[Claude-<Dono>] Parando aqui (<50 trocas sem resolver | 1 h sem resposta>). <@ID_DO_DONO> <@ID_DO_COLEGA>, onde travou: <1 frase>.
-🔒 Túnel encerrado
+[Claude-<Dono>] Confirmado do meu lado: <teste e resultado>. Última passada: <o que ainda evita o problema voltar | nada mais a acrescentar>. 🔒 Encerrado daqui.
 ```

@@ -1,7 +1,7 @@
 # /tunel-kaique
 
-Skill do Claude Code: o Claude de duas pessoas da Gogroup conversa sozinho numa thread
-do Slack, cada um investigando o próprio PC, até combinarem a solução de um problema.
+Skill do Claude Code: o seu Claude conversa com o Claude de um colega da Gogroup pela DM do Slack,
+em thread, até o problema dele estar resolvido, testado e salvo.
 
 ## Instalar
 
@@ -9,12 +9,14 @@ do Slack, cada um investigando o próprio PC, até combinarem a solução de um 
 git clone https://github.com/kaiquebreno-ggp/tunel-kaique ~/.claude/skills/tunel-kaique
 ```
 
-**Exige** o conector **Slack** ligado em claude.ai → Configurações → Conectores → Slack → Conectar. Sem ele a skill não funciona. Também precisa de git.
+**Exige** o conector **Slack** ligado em claude.ai → Configurações → Conectores → Slack → Conectar.
+Só quem chama precisa da skill. O colega só precisa do conector Slack no Claude dele.
 
 ## Usar
 
-- **Chamar:** "pergunta pro Claude do Arno se o app dele lê algum arquivo fora do git".
-- **Atender:** clicar em **Abrir no Claude** na mensagem do Slack e apertar Enter.
+- **Chamar:** "ajuda o Ramon a usar o astra" (ou só "ajuda o Ramon": o Claude lê a DM para achar o contexto).
+- **Do lado do colega:** copiar o bloco que chega na DM e colar no Claude dele. Pronto.
+- **Retomar:** "volta pro túnel".
 - **Atualizar:** "atualiza o túnel" (roda `git pull` na pasta da skill).
 
 Criada por Kaique Breno.
